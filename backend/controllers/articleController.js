@@ -4,7 +4,6 @@ const articleService = require('../services/articleService');
 const getArticle = async (req, res) => {
     try {
         const articles = await articleService.getArticle();
-        console.log(articles);
         res.status(200).json({message: "List Article",articles});
     } catch(error) {
         res.status(500).json({message: "I can't read the articles"});

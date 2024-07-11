@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 const userRoutes = require("./routers/userRouter.js")
 const articleRoutes = require("./routers/articleRouter.js");
 
-const PORT = process.env.PORT ||3000;
+const PORT = process.env.PORT ||5000;
 
 dotenv.config();
 
