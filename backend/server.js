@@ -6,15 +6,17 @@ const dotenv = require("dotenv");
 
 const userRoutes = require("./routers/userRouter.js")
 const articleRoutes = require("./routers/articleRouter.js");
+const authRoutes = require("./routers/authRouter.js");
 
-const PORT = process.env.PORT ||5000;
 
 dotenv.config();
 
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
-app.use("/api/auth", userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
 app.use("/api/article", articleRoutes);
 
 
